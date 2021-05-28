@@ -1,0 +1,62 @@
+.NavList{
+  display: flex;
+  padding: 20px 30px;
+  border: 2px solid green;
+  list-style: none;
+}
+
+.NavItem{
+  margin-right: 16px;
+}
+
+.NavItem:last-child{
+  margin-right: 0;
+}
+
+.NavLink{
+  color: currentColor;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.NavLinkActive{
+  border-top: 1px solid limegreen;
+  border-bottom: 1px solid limegreen;
+  color: limegreen;
+}
+
+.TrendingMovies{
+  padding: 20px 30px;
+}
+
+.TrendingMoviesTitle{
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  font-weight: 600;
+  color: green;
+}
+
+.TrendingMoviesList{
+  padding-left: 40px;
+  list-style:circle;
+}
+
+.TrendingMoviesItem{
+  margin-bottom: 4px;
+}
+
+.TrendingMoviesLink{
+  color: currentColor;
+  text-decoration: none;
+}
+
+.TrendingMoviesItem:hover, .TrendingMoviesLink:hover{
+  color: limegreen;
+}
+
+/* .MovieDetails
+.MovieDetailsImg
+.MovieDetailsContent */
