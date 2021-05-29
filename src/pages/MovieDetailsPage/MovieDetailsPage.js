@@ -25,13 +25,13 @@ class MovieDetailsPage extends Component{
             <h3 className={styles.MovieDetailsTitle}>{title}</h3>
             <p>User score: {vote_average}</p>
             <p>Overview: {overview}</p>
-              {/* <div>{genres.map(({ id, name }) => <ul><li key={id}>{name}</li></ul>)}</div> */}          
+              {/* <div>{genres.map(({ id, name }) => <ul><li key={id}>{name}</li></ul>)}</div>           */}
           </div>
         </div>
         <p>Aditional information</p>
         <ul>
           <li><Link to={`${this.props.match.url}/credits`}>Cast</Link></li>
-          <li><Link to={`${this.props.match.url}/reviews`}>Rewiews</Link></li>
+          <li><Link to={`${this.props.match.url}/reviews`}>Reviews</Link></li>
         </ul>       
       </>
     )

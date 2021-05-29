@@ -1,0 +1,14 @@
+.SearchForm{
+  padding: 20px 30px;
+}
+
+.SearchInput{
+  width: 300px;
+  padding: 4px 2px;
+  margin-right: 5px;
+}
+.SearchButton{
+  padding: 4px 20px;
+  background-color: limegreen;
+  cursor: pointer;
+}

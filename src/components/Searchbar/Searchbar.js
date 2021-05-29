@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+// import PropTypes from 'prop-types';
+import styles from './Searchbar.module.css';
 
 class Searchbar extends Component {
-
   state = {
     inputValue: ''
   }
@@ -24,26 +24,24 @@ class Searchbar extends Component {
 
   render() {
     return (
-      <form className="SearchForm" onSubmit={this.handleSubmit}>
-      
-
-          <input
-            value={this.state.inputValue}
-            onChange={this.handleChange}
-            className="SearchInput"
-            type="text"
-            autoComplete="off"
-            autoFocus
-            placeholder="Input movie-title"
+      <form className={styles.SearchForm} onSubmit={this.handleSubmit}>
+        <input
+          value={this.state.inputValue}
+          onChange={this.handleChange}
+          className={styles.SearchInput}
+          type="text"
+          autoComplete="off"
+          autoFocus
+          placeholder="Input name movie"
         />
-          <button type="submit" className="SearchButton">search</button>
+        <button type="submit" className={styles.SearchButton}>Search</button>
       </form>
-  )
+    )
   }
 }
 
-Searchbar.propTypes = {
-  onSubmit: PropTypes.func.isRequired
-}
+// Searchbar.propTypes = {
+//   onSubmit: PropTypes.func.isRequired
+// }
 
 export default Searchbar;
