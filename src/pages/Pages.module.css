@@ -27,11 +27,11 @@
   color: limegreen;
 }
 
-.TrendingMovies{
+.Movies{
   padding: 20px 30px;
 }
 
-.TrendingMoviesTitle{
+.MoviesTitle{
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -39,24 +39,72 @@
   color: green;
 }
 
-.TrendingMoviesList{
+.MoviesList{
   padding-left: 40px;
   list-style:circle;
 }
 
-.TrendingMoviesItem{
+.MoviesItem{
   margin-bottom: 4px;
 }
 
-.TrendingMoviesLink{
+.MoviesLink{
   color: currentColor;
   text-decoration: none;
 }
 
-.TrendingMoviesItem:hover, .TrendingMoviesLink:hover{
+.MoviesItem:hover, .MoviesLink:hover{
   color: limegreen;
 }
 
-/* .MovieDetails
-.MovieDetailsImg
-.MovieDetailsContent */
+.MovieDetails{
+  display: flex;
+}
+
+.MovieDetailsImg{
+  width: 260px;
+}
+
+.MovieDetailsContent{
+  padding-left: 20px;
+}
+
+.MovieDetailsGenresList{
+  display: inline-flex;
+  list-style: none;
+}
+
+.MovieDetailsGenresList > li{
+  margin-right: 6px;
+}
+
+.MovieDetailsInfo{
+  padding: 20px 30px;
+  border: 2px solid green;
+}
+
+.MovieDetailsInfo p{
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.MovieDetailsInfo ul{
+  list-style: none;
+}
+
+.MovieDetailsInfo li{
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.BackBtn{
+  width: 60px;
+  margin: 10px 28px;
+  padding: 5px 0;
+  border-radius: 50px;
+  background-color: limegreen;
+}
+
+
+

@@ -32,7 +32,7 @@ class Searchbar extends Component {
           type="text"
           autoComplete="off"
           autoFocus
-          placeholder="Input name movie"
+          placeholder="Input movie name"
         />
         <button type="submit" className={styles.SearchButton}>Search</button>
       </form>

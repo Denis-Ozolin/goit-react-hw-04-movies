@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import PropTypes from "prop-types"; 
+
 import styles from '../../pages/Pages.module.css';
 
 class HomePage extends Component {
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
+
   state = {
     trandingMovies: [],
   }
@@ -16,21 +24,26 @@ class HomePage extends Component {
   }
 
   render() {
+    const { location } = this.props;
     return (
-      <div className={styles.TrendingMovies}>
-        <h2 className={styles.TrendingMoviesTitle}>Trending today</h2>
-        <ul className={styles.TrendingMoviesList}>
+      <div className={styles.Movies}>
+        <h2 className={styles.MoviesTitle}>Tranding today</h2>
+        <ul className={styles.MoviesList}>
           {this.state.trandingMovies.map(movie =>
-            <li key={movie.id} className={styles.TrendingMoviesItem}>
-              <Link to={`/movies/${movie.id}`} className={styles.TrendingMoviesLink}>
-                {movie.original_title}
+            <li key={movie.id} className={styles.MoviesItem}>
+              <Link to={{
+                pathname: `/movies/${movie.id}`,
+                state: {
+                  from: location,
+                }
+              }} className={styles.MoviesLink}>
+                {movie.title}
               </Link>
             </li>)}
         </ul>
       </div>
-      // ${this.props.match.url}
     )
   }
 }
 
-export default HomePage;
+export default withRouter(HomePage);
